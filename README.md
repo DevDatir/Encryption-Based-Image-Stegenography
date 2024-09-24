@@ -45,6 +45,8 @@ pip install Pillow matplotlib cryptography numpy
 5. Save the newly encoded image.
 6. View the original and encoded images side-by-side, along with histograms.
 
+![Encoding Process](stego-images/img1.png)
+
 ### 🔷 Decode a Message
 1. Select the encoded image file.
 2. Choose the encryption algorithm used during encoding.
@@ -53,6 +55,17 @@ pip install Pillow matplotlib cryptography numpy
    - For **AES** and **XOR**, enter the key used during encoding.
 4. Click **Decode**.
 5. The hidden message will be displayed.
+
+![Decoding Process](stego-images/img2.png)
+
+### 🔑 Password Entry and Validation
+For AES and XOR, you will be prompted to enter the decryption key as shown below.
+
+![Password Entry](stego-images/img3.png)
+
+Additionally, the password strength validator ensures that your password is strong and meets the required criteria:
+
+![Password Strength Validation](stego-images/img5.png)
 
 ## 🔑 Password Strength Validator
 
@@ -71,6 +84,13 @@ For **AES** and **XOR**, the password is validated against the following criteri
 - **Encode Section**: Input the data to be encoded, choose the encryption method, and embed it into the selected image.
 - **Decode Section**: Select an encoded image, choose the decryption algorithm, and retrieve the hidden data.
 - **Image Comparison**: Visualize differences between the original and encoded images, both side-by-side and using RGB histograms.
+
+![GUI Overview](stego-images/img4.png)
+
+## 📊 Image Histograms
+The tool provides a comparison of histograms between the cover image and the encoded image for each RGB channel, allowing you to analyze the subtle differences.
+
+![Histogram Comparison](stego-images/img4.png)
 
 ## 🌟 Future Enhancements
 - Support for additional file formats.
